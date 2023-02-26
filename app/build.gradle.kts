@@ -1,3 +1,6 @@
+import com.test.buildsrc.App
+import com.test.buildsrc.Deps
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -5,14 +8,14 @@ plugins {
 
 android {
     namespace = "com.test.metmuseum"
-    compileSdk = 33
+    compileSdk = App.compileSdkVersion
 
     defaultConfig {
-        applicationId = "com.test.testclientsapp"
-        minSdk = 24
-        targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = App.applicationId
+        minSdk = App.midSdkVersion
+        targetSdk = App.targetSdkVersion
+        versionCode = App.versionCode
+        versionName = App.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,12 +37,10 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(Deps.Android.ktx)
+    implementation(Deps.Android.appCompat)
+    implementation(Deps.Android.material)
 
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(Deps.Testing.junit)
+    androidTestImplementation(Deps.Testing.junitExt)
 }
