@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MetMuseum"
-include ':app'
+include(":app")
