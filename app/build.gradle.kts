@@ -3,7 +3,8 @@ import com.test.buildsrc.Deps
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -43,6 +44,10 @@ dependencies {
     implementation(Deps.Android.startup)
 
     implementation(Deps.Libraries.timber)
+
+    implementation(Deps.Dagger.dagger)
+    implementation(Deps.Dagger.componentManager)
+    kapt(Deps.Dagger.daggerCompiler)
 
     testImplementation(Deps.Testing.junit)
     androidTestImplementation(Deps.Testing.junitExt)
