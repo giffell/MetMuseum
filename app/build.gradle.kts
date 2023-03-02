@@ -38,6 +38,8 @@ android {
 
 dependencies {
 
+    implementation(project(":modules:core-network"))
+
     implementation(Deps.Android.ktx)
     implementation(Deps.Android.appCompat)
     implementation(Deps.Android.material)
