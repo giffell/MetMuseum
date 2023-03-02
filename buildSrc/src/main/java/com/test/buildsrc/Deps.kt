@@ -11,6 +11,14 @@ object Deps {
 
         private const val materialVersion = "1.8.0"
         const val material = "com.google.android.material:material:$materialVersion"
+
+        private const val startUpVersion = "1.1.1"
+        const val startup = "androidx.startup:startup-runtime:$startUpVersion"
+    }
+
+    object Libraries {
+        private const val timberVersion = "5.0.1"
+        const val timber = "com.jakewharton.timber:timber:$timberVersion"
     }
 
     object Dagger {

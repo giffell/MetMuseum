@@ -40,6 +40,9 @@ dependencies {
     implementation(Deps.Android.ktx)
     implementation(Deps.Android.appCompat)
     implementation(Deps.Android.material)
+    implementation(Deps.Android.startup)
+
+    implementation(Deps.Libraries.timber)
 
     testImplementation(Deps.Testing.junit)
     androidTestImplementation(Deps.Testing.junitExt)
