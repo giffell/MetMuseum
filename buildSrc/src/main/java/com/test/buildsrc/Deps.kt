@@ -13,6 +13,15 @@ object Deps {
         const val material = "com.google.android.material:material:$materialVersion"
     }
 
+    object Dagger {
+        private const val daggerVersion = "2.45"
+        const val dagger = "com.google.dagger:dagger:$daggerVersion"
+        const val daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+
+        private const val componentManagerVersion = "2.1.3"
+        const val componentManager = "com.github.valeryponomarenko.componentsmanager:androidx:$componentManagerVersion"
+    }
+
     object Testing {
         private const val junitVersion = "4.13.2"
         const val junit = "junit:junit:$junitVersion"
