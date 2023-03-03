@@ -8,7 +8,7 @@ plugins {
 }
 
 android {
-    namespace = "com.test.core_data"
+    namespace = "com.test.common"
 
     compileSdk = App.compileSdkVersion
 
@@ -33,17 +33,9 @@ android {
 }
 
 dependencies {
-    api(project(":modules:core-domain"))
-    implementation(project(":modules:common"))
-
     implementation(Deps.Dagger.dagger)
     kapt(Deps.Dagger.daggerCompiler)
 
     implementation(Deps.Android.coroutines)
 
-    implementation(Deps.Retrofit.retrofit)
-    implementation(Deps.Retrofit.moshi)
-    kapt(Deps.Retrofit.moshiCodeGen)
-
-    implementation(Deps.Libraries.sandwich)
 }

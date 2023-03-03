@@ -17,3 +17,5 @@ rootProject.name = "MetMuseum"
 include(":app")
 include(":modules:core-network")
 include(":modules:core-data")
+include(":modules:core-domain")
+include(":modules:common")
