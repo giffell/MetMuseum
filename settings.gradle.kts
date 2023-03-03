@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "MetMuseum"
 include(":app")
 include(":modules:core-network")
+include(":modules:core-data")
