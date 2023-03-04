@@ -20,7 +20,7 @@ internal object Delegates {
             }
         }
 
-    fun searchResultItemDelegate(itemClickListener: (objectId: Long) -> Unit) =
+    fun searchResultItemDelegate(itemClickListener: (objectId: Int) -> Unit) =
         adapterDelegateViewBinding<SearchResultUiItem, UiItem, ListSearchResultItemBinding>(
             { layoutInflater, parent -> ListSearchResultItemBinding.inflate(layoutInflater, parent, false) }
         ) {

@@ -43,4 +43,5 @@ dependencies {
     implementation(Deps.Android.coroutines)
 
     implementation(Deps.Libraries.sandwich)
+    implementation(Deps.Libraries.timber)
 }

@@ -3,4 +3,5 @@
     <string name="search_hint">Example: sunflower</string>
     <string name="search_button_title">Search</string>
     <string name="search_empty_state">Nothing has been found</string>
+    <string name="load_error_message">Error loading</string>
 </resources>

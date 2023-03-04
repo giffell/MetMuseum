@@ -1,14 +1,18 @@
 package com.test.core_data.repositories
 
+import com.skydoves.sandwich.message
+import com.skydoves.sandwich.suspendOnFailure
 import com.skydoves.sandwich.suspendOnSuccess
 import com.test.common.network.AppCoroutineDispatchers
 import com.test.common.network.Dispatcher
 import com.test.core_data.mappers.asDomain
+import com.test.core_domain.model.SearchDomainModel
 import com.test.core_domain.repositories.MetMuseumRepository
 import com.test.core_network.api.MetMuseumDataSource
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
+import timber.log.Timber
 import javax.inject.Inject
 
 class MetMuseumRepositoryImpl @Inject constructor(
@@ -18,8 +22,10 @@ class MetMuseumRepositoryImpl @Inject constructor(
 
     override fun getSearchResult(searchQuery: String) = flow {
         metMuseumDataSource.search(searchQuery)
-            .suspendOnSuccess {
-                emit(data.asDomain())
+            .suspendOnSuccess { emit(data.asDomain()) }
+            .suspendOnFailure {
+                Timber.e(message())
+                emit(SearchDomainModel())
             }
     }.flowOn(coroutineDispatcher)
 

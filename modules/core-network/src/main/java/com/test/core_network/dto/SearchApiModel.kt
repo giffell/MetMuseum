@@ -4,6 +4,6 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class SearchApiModel(
-    val objectIDs: List<Int>,
+    val objectIDs: List<Int>? = null,
     val total: Int
 )

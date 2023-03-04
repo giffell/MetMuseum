@@ -28,7 +28,7 @@ class Router @Inject constructor() : BaseNavigator(), SearchRouter {
         navController?.popBackStack()
     }
 
-    override fun openObjectDetailsFragment(objectId: Long) {
+    override fun openObjectDetailsFragment(objectId: Int) {
         // TODO
     }
 }

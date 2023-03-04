@@ -20,7 +20,11 @@ class GetSearchResultsUseCase @Inject constructor(
 
     override fun execute(params: Params): Flow<Result<SearchResult>> {
         return metMuseumRepository.getSearchResult(params.searchQuery).map {
-            Result.Success(SearchResult(it.objectIDs))
+            if (it.objectIDs != null) {
+                Result.Success(SearchResult(it.objectIDs))
+            } else {
+                Result.Error(Throwable("ObjectIds is null"))
+            }
         }
     }
 }
