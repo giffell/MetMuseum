@@ -16,11 +16,21 @@ class GetObjectDetailsUseCase @Inject constructor(
     private val metMuseumRepository: MetMuseumRepository
 ) : FlowUseCase<GetObjectDetailsUseCase.Params, ObjectDetailsInfo>(coroutineDispatcher) {
 
-    class Params(val objectId: Long)
+    class Params(val objectId: Int)
 
     override fun execute(params: Params): Flow<Result<ObjectDetailsInfo>> {
         return metMuseumRepository.getObjectDetails(params.objectId).map {
-            Result.Success(ObjectDetailsInfo(it.objectID))
+            Result.Success(
+                ObjectDetailsInfo(
+                    objectID = it.objectID,
+                    title = it.title,
+                    primaryImage = it.primaryImage,
+                    additionalImages = it.additionalImages,
+                    department = it.department,
+                    repository = it.repository,
+                    culture = it.culture
+                )
+            )
         }
     }
 }

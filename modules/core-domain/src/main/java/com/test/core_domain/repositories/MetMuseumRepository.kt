@@ -8,5 +8,5 @@ interface MetMuseumRepository {
 
     fun getSearchResult(searchQuery: String): Flow<SearchDomainModel>
 
-    fun getObjectDetails(objectId: Long): Flow<ObjectDetailsDomainModel>
+    fun getObjectDetails(objectId: Int): Flow<ObjectDetailsDomainModel>
 }

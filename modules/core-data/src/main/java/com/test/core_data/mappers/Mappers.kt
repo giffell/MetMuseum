@@ -9,6 +9,12 @@ fun SearchApiModel.asDomain() = SearchDomainModel(objectIDs = objectIDs)
 
 fun ObjectDetailsApiModel.asDomain(): ObjectDetailsDomainModel {
     return ObjectDetailsDomainModel(
-        objectID = objectID
+        objectID = objectID,
+        title = title,
+        primaryImage = primaryImage,
+        additionalImages = additionalImages,
+        department = department,
+        repository = repository,
+        culture = culture
     )
 }

@@ -6,11 +6,13 @@ import com.test.common.network.ActivityScope
 import com.test.metmuseum.MainActivity
 import com.test.metmuseum.R
 import com.test.navigation.BaseNavigator
+import com.test.object_details_screen.ObjectDetailsRouter
+import com.test.search_screen.SearchFragmentDirections
 import com.test.search_screen.SearchRouter
 import javax.inject.Inject
 
 @ActivityScope
-class Router @Inject constructor() : BaseNavigator(), SearchRouter {
+class Router @Inject constructor() : BaseNavigator(), SearchRouter, ObjectDetailsRouter {
 
     override fun onResume(owner: LifecycleOwner) {
         super.onResume(owner)
@@ -29,6 +31,7 @@ class Router @Inject constructor() : BaseNavigator(), SearchRouter {
     }
 
     override fun openObjectDetailsFragment(objectId: Int) {
-        // TODO
+        val direction = SearchFragmentDirections.actionSearchFragmentToObjectDetailsFragment(objectId)
+        navController?.navigate(direction)
     }
 }

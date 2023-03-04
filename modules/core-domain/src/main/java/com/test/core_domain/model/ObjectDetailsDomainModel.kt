@@ -1,6 +1,11 @@
 package com.test.core_domain.model
 
-// TODO add more parameters
 data class ObjectDetailsDomainModel(
-    val objectID: Int
+    val additionalImages: List<String>? = emptyList(),
+    val culture: String = "",
+    val department: String = "",
+    val objectID: Int,
+    val primaryImage: String = "",
+    val repository: String = "",
+    val title: String = ""
 )

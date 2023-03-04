@@ -7,4 +7,5 @@ object App {
     const val targetSdkVersion = 33
     const val versionCode = 1
     const val versionName = "1"
+    const val navGradlePlugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${Deps.Android.navigationVersion}"
 }

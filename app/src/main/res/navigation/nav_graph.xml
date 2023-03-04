@@ -9,5 +9,19 @@
         android:id="@+id/searchFragment"
         android:name="com.test.search_screen.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_objectDetailsFragment"
+            app:destination="@id/objectDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/objectDetailsFragment"
+        android:name="com.test.object_details_screen.ObjectDetailsFragment"
+        android:label="ObjectDetailsFragment">
+
+        <argument
+            android:name="objectId"
+            app:argType="integer" />
+
+    </fragment>
 </navigation>

@@ -5,6 +5,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -44,6 +45,7 @@ dependencies {
     implementation(project(":modules:common"))
     implementation(project(":modules:navigation"))
     implementation(project(":modules:features:search-screen"))
+    implementation(project(":modules:features:object-details-screen"))
 
     implementation(Deps.Android.ktx)
     implementation(Deps.Android.appCompat)

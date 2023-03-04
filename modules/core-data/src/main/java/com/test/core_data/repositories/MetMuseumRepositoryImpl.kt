@@ -5,6 +5,7 @@ import com.skydoves.sandwich.suspendOnFailure
 import com.skydoves.sandwich.suspendOnSuccess
 import com.test.common.network.AppCoroutineDispatchers
 import com.test.common.network.Dispatcher
+import com.test.core_data.errors.NotValidObjectError
 import com.test.core_data.mappers.asDomain
 import com.test.core_domain.model.SearchDomainModel
 import com.test.core_domain.repositories.MetMuseumRepository
@@ -29,10 +30,12 @@ class MetMuseumRepositoryImpl @Inject constructor(
             }
     }.flowOn(coroutineDispatcher)
 
-    override fun getObjectDetails(objectId: Long) = flow {
+    override fun getObjectDetails(objectId: Int) = flow {
         metMuseumDataSource.getObjectDetailsById(objectId)
-            .suspendOnSuccess {
-                emit(data.asDomain())
+            .suspendOnSuccess { emit(data.asDomain()) }
+            .suspendOnFailure {
+                Timber.e(message())
+                throw NotValidObjectError()
             }
     }.flowOn(coroutineDispatcher)
 }

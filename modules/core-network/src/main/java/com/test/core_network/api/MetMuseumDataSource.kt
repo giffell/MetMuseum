@@ -16,6 +16,6 @@ interface MetMuseumDataSource {
 
     @GET("${ApiConst.OBJECT_BY_ID}/{id}")
     suspend fun getObjectDetailsById(
-        @Path("id") objectId: Long
+        @Path("id") objectId: Int
     ): ApiResponse<ObjectDetailsApiModel>
 }

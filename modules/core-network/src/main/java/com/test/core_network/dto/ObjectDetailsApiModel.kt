@@ -41,7 +41,6 @@ data class ObjectDetailsApiModel(
     val linkResource: String,
     val locale: String,
     val locus: String,
-    val measurements: List<MeasurementApiModel>,
     val medium: String,
     val metadataDate: String,
     val objectBeginDate: Int,

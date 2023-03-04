@@ -1,6 +1,11 @@
 package com.test.core_model
 
-// TODO add more parameters
 data class ObjectDetailsInfo(
-    val objectID: Int
+    val additionalImages: List<String>?,
+    val culture: String,
+    val department: String,
+    val objectID: Int,
+    val primaryImage: String,
+    val repository: String,
+    val title: String
 )
