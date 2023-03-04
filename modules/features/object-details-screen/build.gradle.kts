@@ -53,4 +53,5 @@ dependencies {
     implementation(Deps.Libraries.adapterDelegates)
     implementation(Deps.Libraries.viewBinding)
     implementation(Deps.Libraries.timber)
+    implementation(Deps.Libraries.coil)
 }

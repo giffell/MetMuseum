@@ -40,6 +40,9 @@ object Deps {
 
         private const val adapterDelegatesVersion = "4.3.2"
         const val adapterDelegates = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapterDelegatesVersion"
+
+        private const val coilVersion = "2.2.2"
+        const val coil = "io.coil-kt:coil:$coilVersion"
     }
 
     object Retrofit {
