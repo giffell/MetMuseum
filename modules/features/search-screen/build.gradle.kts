@@ -4,6 +4,7 @@ import com.test.buildsrc.Deps
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {
@@ -29,12 +30,28 @@ android {
         jvmTarget = "1.8"
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {
     implementation(project(":modules:navigation"))
+    implementation(project(":modules:common"))
+    api(project(":modules:core-domain"))
+    api(project(":modules:core-model"))
 
     implementation(Deps.Android.ktx)
     implementation(Deps.Android.appCompat)
     implementation(Deps.Android.material)
+    implementation(Deps.Android.lifecycleViewModelKtx)
+    implementation(Deps.Android.fragmentKtx)
+
+    implementation(Deps.Dagger.dagger)
+    implementation(Deps.Dagger.componentManager)
+    kapt(Deps.Dagger.daggerCompiler)
+
+    implementation(Deps.Libraries.adapterDelegates)
+    implementation(Deps.Libraries.viewBinding)
 }

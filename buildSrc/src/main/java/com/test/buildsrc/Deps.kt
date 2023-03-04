@@ -20,6 +20,12 @@ object Deps {
 
         const val navigationVersion = "2.5.3"
         const val navigation = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+
+        private const val lifecycleViewModelKtxVersion = "2.5.1"
+        const val lifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleViewModelKtxVersion"
+
+        private const val fragmentKtxVersion = "1.5.5"
+        const val fragmentKtx = "androidx.fragment:fragment-ktx:$fragmentKtxVersion"
     }
 
     object Libraries {
@@ -28,6 +34,12 @@ object Deps {
 
         private const val sandwichVersion = "1.3.2"
         const val sandwich = "com.github.skydoves:sandwich:$sandwichVersion"
+
+        private const val viewBindingVersion = "1.5.3"
+        const val viewBinding = "com.github.kirich1409:viewbindingpropertydelegate-noreflection:$viewBindingVersion"
+
+        private const val adapterDelegatesVersion = "4.3.2"
+        const val adapterDelegates = "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapterDelegatesVersion"
     }
 
     object Retrofit {

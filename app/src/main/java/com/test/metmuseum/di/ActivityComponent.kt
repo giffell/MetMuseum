@@ -2,6 +2,7 @@ package com.test.metmuseum.di
 
 import com.test.common.network.ActivityScope
 import com.test.metmuseum.MainActivity
+import com.test.search_screen.di.SearchDependencies
 import dagger.Subcomponent
 
 @ActivityScope
@@ -10,6 +11,6 @@ import dagger.Subcomponent
         NavigationModule::class
     ]
 )
-interface ActivityComponent {
+interface ActivityComponent : SearchDependencies {
     fun inject(activity: MainActivity)
 }

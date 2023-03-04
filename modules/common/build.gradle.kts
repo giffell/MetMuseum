@@ -37,5 +37,6 @@ dependencies {
     kapt(Deps.Dagger.daggerCompiler)
 
     implementation(Deps.Android.coroutines)
+    implementation(Deps.Android.ktx)
 
 }
