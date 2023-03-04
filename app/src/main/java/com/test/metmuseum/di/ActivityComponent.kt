@@ -5,7 +5,11 @@ import com.test.metmuseum.MainActivity
 import dagger.Subcomponent
 
 @ActivityScope
-@Subcomponent
+@Subcomponent(
+    modules = [
+        NavigationModule::class
+    ]
+)
 interface ActivityComponent {
     fun inject(activity: MainActivity)
 }

@@ -42,11 +42,14 @@ dependencies {
     implementation(project(":modules:core-data"))
     implementation(project(":modules:core-domain"))
     implementation(project(":modules:common"))
+    implementation(project(":modules:navigation"))
+    implementation(project(":modules:features:search-screen"))
 
     implementation(Deps.Android.ktx)
     implementation(Deps.Android.appCompat)
     implementation(Deps.Android.material)
     implementation(Deps.Android.startup)
+    implementation(Deps.Android.navigation)
 
     implementation(Deps.Libraries.timber)
 

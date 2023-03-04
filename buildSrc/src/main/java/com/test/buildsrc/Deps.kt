@@ -17,6 +17,9 @@ object Deps {
 
         private const val coroutinesVersion = "1.6.4"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+
+        const val navigationVersion = "2.5.3"
+        const val navigation = "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     }
 
     object Libraries {
