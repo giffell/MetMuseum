@@ -20,4 +20,6 @@ import javax.inject.Singleton
 interface AppComponent {
 
     fun inject(app: AppApplication)
+
+    fun init(): ActivityComponent
 }
