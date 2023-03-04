@@ -1,4 +1,4 @@
-package com.test.core_data.api
+package com.test.core_network.api
 
 object ApiConst {
 

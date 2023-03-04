@@ -1,6 +1,6 @@
-package com.test.core_data.di
+package com.test.core_network.di
 
-import com.test.core_data.api.MetMuseumDataSource
+import com.test.core_network.api.MetMuseumDataSource
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

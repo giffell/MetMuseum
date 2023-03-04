@@ -43,6 +43,9 @@ dependencies {
     api(Deps.Retrofit.retrofit)
     api(Deps.Retrofit.logginInterceptor)
     implementation(Deps.Retrofit.moshiConverter)
+    implementation(Deps.Retrofit.moshi)
+    kapt(Deps.Retrofit.moshiCodeGen)
+
     implementation(Deps.Libraries.sandwich)
 
 }

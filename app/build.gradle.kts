@@ -40,6 +40,7 @@ dependencies {
 
     implementation(project(":modules:core-network"))
     implementation(project(":modules:core-data"))
+    implementation(project(":modules:core-domain"))
     implementation(project(":modules:common"))
 
     implementation(Deps.Android.ktx)

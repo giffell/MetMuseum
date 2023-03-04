@@ -1,8 +1,8 @@
-package com.test.core_data.api
+package com.test.core_network.api
 
 import com.skydoves.sandwich.ApiResponse
-import com.test.core_data.dto.ObjectDetailsApiModel
-import com.test.core_data.dto.SearchApiModel
+import com.test.core_network.dto.ObjectDetailsApiModel
+import com.test.core_network.dto.SearchApiModel
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

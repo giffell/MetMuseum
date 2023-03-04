@@ -1,4 +1,4 @@
-package com.test.core_data.dto
+package com.test.core_network.dto
 
 import com.squareup.moshi.JsonClass
 

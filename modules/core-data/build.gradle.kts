@@ -33,17 +33,14 @@ android {
 }
 
 dependencies {
-    api(project(":modules:core-domain"))
+    implementation(project(":modules:core-domain"))
+    implementation(project(":modules:core-network"))
     implementation(project(":modules:common"))
 
     implementation(Deps.Dagger.dagger)
     kapt(Deps.Dagger.daggerCompiler)
 
     implementation(Deps.Android.coroutines)
-
-    implementation(Deps.Retrofit.retrofit)
-    implementation(Deps.Retrofit.moshi)
-    kapt(Deps.Retrofit.moshiCodeGen)
 
     implementation(Deps.Libraries.sandwich)
 }
