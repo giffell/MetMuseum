@@ -1,18 +1,17 @@
 import com.test.buildsrc.App
-import com.test.buildsrc.Deps
 
 plugins {
     id("com.android.library")
     kotlin("android")
-    kotlin("kapt")
 }
 
 android {
-    namespace = "com.test.core_domain"
+    namespace = "com.test.core_model"
 
     compileSdk = App.compileSdkVersion
 
     defaultConfig {
+
         minSdk = App.midSdkVersion
     }
 
@@ -33,11 +32,5 @@ android {
 }
 
 dependencies {
-    implementation(project(":modules:common"))
-    implementation(project(":modules:core-model"))
 
-    implementation(Deps.Dagger.dagger)
-    kapt(Deps.Dagger.daggerCompiler)
-
-    implementation(Deps.Android.coroutines)
 }
