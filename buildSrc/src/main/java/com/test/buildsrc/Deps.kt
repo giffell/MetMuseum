@@ -15,7 +15,7 @@ object Deps {
         private const val startUpVersion = "1.1.1"
         const val startup = "androidx.startup:startup-runtime:$startUpVersion"
 
-        private const val coroutinesVersion = "1.6.4"
+        const val coroutinesVersion = "1.6.4"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
 
         const val navigationVersion = "2.5.3"
@@ -72,5 +72,15 @@ object Deps {
 
         private const val junitExtVersion = "1.1.5"
         const val junitExt = "androidx.test.ext:junit:$junitExtVersion"
+
+        private const val mockitoVersion = "2.2.0"
+        const val mockito = "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoVersion"
+        private const val mockitoInlineVersion = "5.1.1"
+        const val mockitoInline = "org.mockito:mockito-inline:$mockitoInlineVersion"
+
+        private const val turbineVersion = "0.12.1"
+        const val turbine = "app.cash.turbine:turbine:$turbineVersion"
+
+        const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Android.coroutinesVersion}"
     }
 }

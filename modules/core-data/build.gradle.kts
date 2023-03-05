@@ -44,4 +44,12 @@ dependencies {
 
     implementation(Deps.Libraries.sandwich)
     implementation(Deps.Libraries.timber)
+
+    testImplementation(project(":modules:core-test"))
+    testImplementation(Deps.Testing.junit)
+    testImplementation(Deps.Testing.coroutinesTest)
+    testImplementation(Deps.Testing.turbine)
+    testImplementation(Deps.Testing.mockito)
+    testImplementation(Deps.Testing.mockitoInline)
+    testImplementation(Deps.Android.coroutines)
 }
