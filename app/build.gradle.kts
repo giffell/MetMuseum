@@ -59,6 +59,6 @@ dependencies {
     implementation(Deps.Dagger.componentManager)
     kapt(Deps.Dagger.daggerCompiler)
 
-    testImplementation(Deps.Testing.junit)
     androidTestImplementation(Deps.Testing.junitExt)
+    androidTestImplementation(Deps.Testing.kaspresso)
 }

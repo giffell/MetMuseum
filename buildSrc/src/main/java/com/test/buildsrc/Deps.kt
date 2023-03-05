@@ -82,5 +82,8 @@ object Deps {
         const val turbine = "app.cash.turbine:turbine:$turbineVersion"
 
         const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Android.coroutinesVersion}"
+
+        private const val kaspressoVersion = "1.5.1"
+        const val kaspresso = "com.kaspersky.android-components:kaspresso:$kaspressoVersion"
     }
 }
