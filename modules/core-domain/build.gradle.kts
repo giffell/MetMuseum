@@ -40,4 +40,12 @@ dependencies {
     kapt(Deps.Dagger.daggerCompiler)
 
     implementation(Deps.Android.coroutines)
+
+    testImplementation(project(":modules:core-test"))
+    testImplementation(Deps.Testing.junit)
+    testImplementation(Deps.Testing.coroutinesTest)
+    testImplementation(Deps.Testing.turbine)
+    testImplementation(Deps.Testing.mockito)
+    testImplementation(Deps.Testing.mockitoInline)
+    testImplementation(Deps.Android.coroutines)
 }
